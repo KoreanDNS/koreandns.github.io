@@ -1,0 +1,73 @@
+---
+title: 백준 12761 돌다리 [Silver IV]
+author: Koreandns
+date: 2020-04-20 02:05:00 +0800
+categories: [Blogging, Tutorial]
+tags: [writing]
+---
+
+
+
+링크 : [https://www.acmicpc.net/problem/12761](https://www.acmicpc.net/problem/12761)
+
+
+
+```c++
+// 예전에 풀고 싶었지만 어떻게 풀어야할지 몰랐던 문제를 드디어 혼자 힘으로 풀었네 만세~
+// BFS 개념만 있으면 쉽게 풀 수 있는 문제
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX = 100001;
+int vis[MAX];
+
+int main(void)
+{
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+
+	int a, b, n, m;
+	cin >> a >> b >> n >> m;
+
+	if (n == m)
+	{
+		cout << 0;
+		return 0;
+	}
+
+	vis[n] = true;
+
+	int distCount = numeric_limits<int>::max();
+
+	queue<int> q;
+	q.push(n);
+
+	while (false == q.empty())
+	{
+		int curX = q.front();
+		q.pop();
+
+		for (int nx : {curX-1, curX+1, curX - a, curX+a, curX - b, curX+b, -curX* a, curX*a, -curX * b, curX*b})
+		{
+			if (nx < 0 or MAX <= nx or vis[nx])
+			{
+				continue;
+			}
+
+			if (m == nx)
+			{
+				distCount = min(vis[curX], distCount);
+				break;
+			}
+
+			vis[nx] = vis[curX] + 1;
+			q.push(nx);
+		}
+	}
+
+	cout << distCount;
+	return 0;
+}
+```
+
