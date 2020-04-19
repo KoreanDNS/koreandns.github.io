@@ -10,7 +10,6 @@ title: About
 
 > **Note**: 
 >
-> 1. https://solved.ac/koreandns
->
-> 2. https://www.acmicpc.net/user/koreandns
-> 3. https://codeforces.com/profile/koreandns
+> 1. [https://solved.ac/koreandns](https://solved.ac/koreandns)
+> 2. [https://www.acmicpc.net/user/koreandns](https://www.acmicpc.net/user/koreandns)
+> 3. [https://codeforces.com/profile/koreandns](https://codeforces.com/profile/koreandns)
