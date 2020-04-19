@@ -56,7 +56,7 @@ int main(void)
 			if (m == nx)
 			{
 				cout << vis[curX];
-                return 0;
+				return 0;
 			}
 
 			vis[nx] = vis[curX] + 1;
