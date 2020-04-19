@@ -8,4 +8,9 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+> **Note**: 
+>
+> 1. https://solved.ac/koreandns
+>
+> 2. https://www.acmicpc.net/user/koreandns
+> 3. https://codeforces.com/profile/koreandns
