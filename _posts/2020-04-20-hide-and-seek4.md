@@ -1,0 +1,87 @@
+---
+title: 백준 13913 숨바꼭질 4 [Gold IV]
+author: Koreandns
+date: 2020-04-20 02:00:00 +0800
+categories: [Blogging, Tutorial]
+tags: [writing]
+---
+
+
+
+링크 : [https://www.acmicpc.net/problem/13913](https://www.acmicpc.net/problem/13913)
+
+
+
+```c++
+// 이번 문제는 생각보다 쉬웠다.
+// vis[1] 번째에 이전 위치를 입력해서 최종 위치까지 경로를 알 수 있도록 만들면 된다.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX = 1e5 + 1;
+int vis[2][MAX]; //[0] 방문 가중치 [1] 이전 위치
+
+int main(void)
+{
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+
+	int n, k;
+	cin >> n >> k;
+
+	if (n == k)
+	{
+		cout << 0 << ' ' << '\n' << n;
+		return 0;
+	}
+
+	queue<int> q;
+	vis[0][n] = true;
+	q.push(n);
+
+	int dx[3]{-1, 1, 2};
+	while (false == q.empty())
+	{
+		int cur = q.front();
+		q.pop();
+
+		for (int dir=0; dir<3; ++dir)
+		{
+			int nx = 2 == dir ? cur * dx[dir] : cur + dx[dir];
+			if (nx < 0 or MAX <= nx or vis[0][nx])
+			{
+				continue;
+			}
+
+			vis[0][nx] = vis[0][cur] + 1;
+			vis[1][nx] = cur;
+
+			q.push(nx);
+
+			if (nx == k)
+			{
+				int loopMax = vis[0][cur];
+				cout << loopMax << '\n';
+
+				int oldCur = nx;
+				stack<int> s;
+				for (int index=0; index<=loopMax; ++index)
+				{
+					s.push(oldCur);
+					oldCur = vis[1][oldCur];
+				}
+				while (false == s.empty())
+				{
+					cout << s.top() << ' ';
+					s.pop();
+				}
+				return 0;
+			}
+		}
+	}
+
+	return 0;
+}
+```
+
