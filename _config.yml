@@ -53,7 +53,7 @@ timezone: Asia/Shanghai
 
 google_analytics:
   # Fill with your Google Analytics ID
-  id: ''
+  id: 'koreandns'
   # The Google Analytics pageviews switch.
 
   pv:
