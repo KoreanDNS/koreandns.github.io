@@ -18,8 +18,7 @@ tags: [writing]
 |  3.  |  <span style="color:blue">31</span>  |  <span style="color:blue">41</span>  |  <span style="color:blue">59</span>  |  <span style="color:red">26</span>  |  41  |  58  |
 |  4.  |  <span style="color:blue">26</span>  |  <span style="color:blue">31</span>  |  <span style="color:blue">41</span>  |  <span style="color:blue">59</span>  |  <span style="color:red">41</span>  |  58  |
 |  5.  |  <span style="color:blue">26</span>  |  <span style="color:blue">31</span>  |  <span style="color:blue">41</span>  |  <span style="color:blue">41</span>  |  <span style="color:blue">59</span>  |  <span style="color:red">58</span>  |
-|  완료  |  26  |  31  |  41  |  41  |  58  |  59  |
-
+|  완료  |  <span style="color:green">26</span>  |  <span style="color:green">31</span>  |  <span style="color:green">41</span>  |  <span style="color:green">41</span>  |  <span style="color:green">58</span>  |  <span style="color:green">59</span>  |
 
 
 
