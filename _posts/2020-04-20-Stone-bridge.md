@@ -38,8 +38,6 @@ int main(void)
 
 	vis[n] = true;
 
-	int distCount = numeric_limits<int>::max();
-
 	queue<int> q;
 	q.push(n);
 
@@ -57,8 +55,8 @@ int main(void)
 
 			if (m == nx)
 			{
-				distCount = min(vis[curX], distCount);
-				break;
+				cout << vis[curX];
+                return 0;
 			}
 
 			vis[nx] = vis[curX] + 1;
@@ -66,7 +64,6 @@ int main(void)
 		}
 	}
 
-	cout << distCount;
 	return 0;
 }
 ```
