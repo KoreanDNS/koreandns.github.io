@@ -1,0 +1,69 @@
+---
+title: 백준 1697 숨바꼭질 [Silver I]
+author: Koreandns
+date: 2020-04-21 06:00:00 +0800
+categories: [Blogging, Tutorial]
+tags: [writing]
+---
+
+
+
+링크 : [https://www.acmicpc.net/problem/1697](https://www.acmicpc.net/problem/1697)
+
+
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX = 100001;
+int vis[MAX]; // 방문한곳 안한곳 구별용
+
+int main(void)
+{
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+
+	int n, k; // n : 수빈, k : 동생
+	cin >> n >> k;
+
+	if (n == k) // 같은 위치에 있다면 찾을 필요가 없음
+	{
+		cout << 0;
+		return 0;
+	}
+
+	int dx[3] = { -1, 1, 2 }; // 현재 좌표를 중심으로 좌우 또는 *2배 이동할 수 있음
+	vis[n] = 1;
+
+	queue<int> q;
+	q.push(n);
+
+	while (false == q.empty())
+	{
+		int curX = q.front();
+		q.pop();
+		for (int dir=0; dir<3; ++dir)
+		{
+			// 가장 마지막은 *2배를 해줘야하기 때문에 삼항 연산자 사용
+			int nx = dir == 2 ?  curX * dx[dir] : curX + dx[dir];
+			if (nx < 0 or MAX <= nx or vis[nx])
+			{
+				continue;
+			}
+
+			if (k == nx)
+			{
+				cout << vis[curX]; // 가장 첫 시작점 시간이 1초였기 때문에 현재 시간을 출력해주면 된다.
+				return 0;
+			}
+
+			vis[nx] = vis[curX] + 1;
+			q.push(nx);
+		}
+	}
+
+	return 0;
+}
+```
+
