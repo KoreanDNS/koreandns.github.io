@@ -2,8 +2,8 @@
 title: 삽입 정렬
 author: Koreandns
 date: 2020-04-19 14:10:00 +0800
-categories: [Blogging, Tutorial]
-tags: [writing]
+categories: [Algorithm, sort]
+tags: [Algorithm, sort]
 ---
 
 # [진행 과정] 오름 차순
