@@ -1,5 +1,5 @@
 ---
-title: [MSSQL] 트랜잭션 다양한 케이스 분석
+title: MSSQL 트랜잭션 다양한 케이스 분석
 author: Koreandns
 date: 2020-04-29 00:00:00 +0800
 categories: [MSSQL, transaction]
@@ -10,7 +10,7 @@ tags: [MSSQL, transaction]
 
 [TEST CASE 1] exec t1 결과는?
 
-```mssql
+```c++
 USE [master]
 GO
 /****** Object:  StoredProcedure [dbo].[t2]    Script Date: 2020-04-29 오전 12:07:14 ******/
@@ -73,12 +73,11 @@ t2에서는 test2에 값1을 넣고 커밋을 하고 반환을 했다. 그 다�
 모두 다 롤백 처리가 된다.
 
 ------
+<br>
 
+[TEST CASE 2] exec t1 결과는?
 
-
-[TEST CASE2] exec t1 결과는?
-
-```mssql
+```c++
 USE [master]
 GO
 /****** Object:  StoredProcedure [dbo].[t2]    Script Date: 2020-04-29 오전 12:07:14 ******/
@@ -139,12 +138,11 @@ t2 함수가 롤백이 되어서 리턴되면 t1함수쪽도 begin cat문으로 
 답은 모두 다 롤백 대상
 
 ------
+<br>
 
+[TEST CASE 3] exec t1 결과는?
 
-
-[TEST CASE3] exec t1 결과는?
-
-```mssql
+```c++
 USE [master]
 GO
 /****** Object:  StoredProcedure [dbo].[t2]    Script Date: 2020-04-29 오전 12:07:14 ******/
