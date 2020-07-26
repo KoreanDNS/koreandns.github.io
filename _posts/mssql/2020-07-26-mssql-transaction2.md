@@ -12,7 +12,7 @@ tags: [MSSQL, transaction]
 
 
 
-![](C:\git\koreandns.github.io\img\tran.png)
+![](..\..\img\tran.png)
 
 
 
@@ -38,7 +38,7 @@ tags: [MSSQL, transaction]
 
 
 
-![](C:\git\koreandns.github.io\img\tranLog.png)
+![](..\..\img\tranLog.png)
 
 
 
@@ -91,7 +91,7 @@ tags: [MSSQL, transaction]
 
 
 
-![](C:\git\koreandns.github.io\img\intent_lock1.png)
+![](..\..\img\intent_lock1.png)
 
 ​                                                                                                              잠금 계층 구조는 이렇게 되어 있다.
 
@@ -99,7 +99,7 @@ tags: [MSSQL, transaction]
 
 
 
-![](C:\git\koreandns.github.io\img\intent_lock2.png)
+![](..\..\img\intent_lock2.png)
 
 1. 한 행에 대해서 공유 잠금을 걸었다.
 2. 다수의 사용자가 여러 행에 대해서 수정을 하려고 한다. 이럴때 어디가 문제일까?
@@ -111,7 +111,7 @@ tags: [MSSQL, transaction]
 
 
 
-![](C:\git\koreandns.github.io\img\intent_lock3.png)
+![](..\..\img\intent_lock3.png)
 
 Intent Lock 적용이 되었으니 다시 살펴보자.
 
