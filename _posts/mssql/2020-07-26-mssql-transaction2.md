@@ -128,9 +128,9 @@ Intent Lock은 이러한 목적이다.
 
 참조
 
-https://docs.microsoft.com/ko-kr/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql?view=sql-server-ver15
+[https://docs.microsoft.com/ko-kr/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql?view=sql-server-ver15](https://docs.microsoft.com/ko-kr/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql?view=sql-server-ver15)
 
-https://www.sqlservercentral.com/blogs/intent-locks-in-sql-server
+[https://www.sqlservercentral.com/blogs/intent-locks-in-sql-server](https://www.sqlservercentral.com/blogs/intent-locks-in-sql-server)
 
-https://ko.wikipedia.org/wiki/ACID
+[https://ko.wikipedia.org/wiki/ACID](https://ko.wikipedia.org/wiki/ACID)
 
