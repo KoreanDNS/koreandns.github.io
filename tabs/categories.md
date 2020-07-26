@@ -59,12 +59,11 @@ title: Categories
         <i class="fas fa-fw fa-angle-right disabled"></i>
         {% endif %}
       </a>
-
     </div> <!-- .card-header -->
 
     <!-- Sub-categories -->
     {% if sub_categories_size > 0 %}
-    <div id="l_{{ category_name }}" class="collapse show" aria-expanded="true">
+    <div id="l_{{ category_name }}" class="collapse" aria-expanded="true">
       <ul class="list-group">
         {% for sub_category in sub_categories %}
         <li class="list-group-item">
